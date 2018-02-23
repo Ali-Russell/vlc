@@ -201,6 +201,7 @@ libvlccore_la_SOURCES = \
 	config/getopt.c \
 	config/vlc_getopt.h \
 	extras/libc.c \
+	extras/tdestroy.c \
 	modules/modules.h \
 	modules/modules.c \
 	modules/bank.c \
