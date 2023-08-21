@@ -277,5 +277,4 @@ void libvlc_event_detach(libvlc_event_manager_t *em, libvlc_event_type_t type,
              return;
          }
     }
-    abort();
 }
