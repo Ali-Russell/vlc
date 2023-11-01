@@ -384,6 +384,13 @@ avas_SetActive(audio_output_t *p_aout, bool active, NSUInteger options)
         AVAudioSessionMode mode = AVAudioSessionModeMoviePlayback;
         AVAudioSessionRouteSharingPolicy policy = GetRouteSharingPolicy(p_aout);
 
+        char *role = var_InheritString(p_aout, "role");
+        if (role && strcmp(role, "communication")
+        {
+                category = AVAudioSessionCategoryPlayAndRecord;
+                mode = AVAudioSessionModeVoiceChat;
+        } 
+
         if (@available(iOS 11.0, tvOS 11.0, *))
         {
             ret = [instance setCategory:category
